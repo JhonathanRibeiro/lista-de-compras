@@ -10,6 +10,7 @@
           id="productName" 
           placeholder="Nome do produto"
           required 
+          maxlength="40"
           #newProduct>
         </td>
 
@@ -18,10 +19,10 @@
         </td>
     </tr>
 
-    <tr *ngFor="let product of products" class="list-item">
-      <td>{{product.label}}</td>
+    <tr *ngFor="let produto of lista" class="list-item">
+      <td>{{produto.name | uppercase}}</td>
       <td>
-        <button (click)="deleteProduct(product)">remover</button>
+        <button (click)="delete(produto)">remover</button>
       </td>
     </tr>
 

@@ -1,7 +1,7 @@
-* {padding: 0;}
-
 :root {
     --standard-color: #ebe9e9;
+    --color-red: red;
+    --cursor: pointer;
 }
 
 body {
@@ -10,7 +10,9 @@ body {
 }
 
 h1 {
-    font-weight: 600;
+    font-weight: 100;
+    font-size: 25px;
+    color: #0020aff8;
     margin: 10px 7px;
 }
 
@@ -31,15 +33,15 @@ input[type=text]{
 }
 
 button {
-    cursor: pointer;
+    cursor: var(--cursor);
     padding: 4px 26px;
     background: transparent;
-    color: red;
+    color: var(--color-red);
     border: none;
 }
 button:hover {
-    cursor: pointer;
-    background: red;
+    cursor: var(--cursor);
+    background: var(--color-red);
     color: white;
     border: none;
     border-radius: 5px;
@@ -59,13 +61,13 @@ button:hover {
     border: none;
     border-radius: 4px;
     padding: 9px;
-    cursor: pointer;
+    cursor: var(--cursor);
     background:#0024c5e8;
     color: #fff;
 }
 .btn-add-product:hover {
     background: #0020aff8;
 }
-.btnOutlineDanger {
-    border: 1px solid red!important;
+.outlineDanger {
+    border: 1px solid var(--color-red)!important;
 }

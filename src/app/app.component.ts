@@ -7,40 +7,41 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Lista de compras';
-  products = [
+  lista = [
     {
-      label: 'Chocolate'
+      name: 'Chocolate'
     },
     {
-      label: 'Coca Cola'
+      name: 'Coca Cola'
     },
     {
-      label: 'Doritos'
+      name: 'Doritos'
     },
     {
-      label: 'Coxinha'
+      name: 'Coxinha'
     }
   ];
 
-  public addProduct(newProductLabel){
+  public addProduct(productname){
     const el = document.querySelector('#productName');
 
-    if(newProductLabel === ''){
+    if(productname === ''){
       alert(`Não é possível adicionar um produto sem nome, por favor, preencha o campo e tente novamente`);
-      el.classList.add('btnOutlineDanger');
+      el.classList.add('outlineDanger');
       return;
     }
-    el.classList.remove('btnOutlineDanger');
+    el.classList.remove('outlineDanger');
     
     const newProduct = {
-      label: newProductLabel
+      name: productname
     };
-
-    this.products.push(newProduct);
+    this.lista.push(newProduct);
   }
 
-  public deleteProduct(product){
-    this.products = this.products.filter(p => p.label !== product.label);
+  public delete(product){
+    const confirmDelete = confirm(`o item ${product.name} será removido da lista, deseja continuar?`);
+    if(confirmDelete == true){
+      this.lista = this.lista.filter(p => p.name !== product.name);
+    } 
   }
-
 }
