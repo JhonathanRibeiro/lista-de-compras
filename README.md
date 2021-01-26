@@ -1,4 +1,6 @@
-# ToDoListApp
+# Lista de Compras - ToDoList
+
+<img src="https://user-images.githubusercontent.com/37172038/105731989-c5582080-5f0e-11eb-971e-a6876da13ef0.png">
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.1.
 
