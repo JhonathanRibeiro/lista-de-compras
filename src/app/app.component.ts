@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Lista de compras';
+
   lista = [
     {
       name: 'Chocolate'
@@ -31,7 +32,7 @@ export class AppComponent {
       return;
     }
     el.classList.remove('outlineDanger');
-    
+
     const newProduct = {
       name: productname
     };
@@ -39,7 +40,8 @@ export class AppComponent {
   }
 
   public delete(product){
-    const confirmDelete = confirm(`o item ${product.name} será removido da lista, deseja continuar?`);
+    const confirmDelete = confirm(`O item ${product.name} será removido da lista, deseja continuar?`);
+    
     if(confirmDelete == true){
       this.lista = this.lista.filter(p => p.name !== product.name);
     } 
