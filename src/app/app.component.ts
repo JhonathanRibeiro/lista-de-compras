@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Lista de compras';
 
-  lista = [
+  list = [
     {
       name: 'Chocolate'
     },
@@ -25,25 +25,28 @@ export class AppComponent {
 
   public addProduct(productname){
     const el = document.querySelector('#productName');
+    const msg = document.querySelector('#msg');
 
     if(productname === ''){
-      alert(`Não é possível adicionar um produto sem nome, por favor, preencha o campo e tente novamente`);
+      msg.classList.add('display-block');
       el.classList.add('outlineDanger');
       return;
     }
+    msg.classList.remove('display-block');
     el.classList.remove('outlineDanger');
 
     const newProduct = {
       name: productname
     };
-    this.lista.push(newProduct);
+    
+    this.list.push(newProduct);
   }
 
   public delete(product){
     const confirmDelete = confirm(`O item ${product.name} será removido da lista, deseja continuar?`);
-    
+
     if(confirmDelete == true){
-      this.lista = this.lista.filter(p => p.name !== product.name);
+      this.list = this.list.filter(p => p.name !== product.name);
     } 
   }
 }

@@ -27,7 +27,7 @@ td {
 input[type=text]{
     width: 98%;
     outline: none;
-    padding: 8px 2px;
+    padding: 8px;
     border-radius: 3px;
     border: 1px solid var(--standard-color);
 }
@@ -70,4 +70,13 @@ button:hover {
 }
 .outlineDanger {
     border: 1px solid var(--color-red)!important;
+}
+.text-danger {
+    color: #db0000;
+}
+.display-block {
+    display: block!important;
+}
+.display-none {
+    display: none;
 }
