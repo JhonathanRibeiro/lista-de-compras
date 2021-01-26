@@ -1,0 +1,29 @@
+<div class="container">
+  <table>
+    <tr>
+      <h1>{{title}}</h1>
+    </tr>
+    <tr class="header">
+      <td>
+        <input 
+          type="text"
+          id="productName" 
+          placeholder="Nome do produto"
+          required 
+          #newProduct>
+        </td>
+
+        <td>
+          <button class="btn-add-product" (click)="addProduct(newProduct.value); newProduct.value=''">Adicionar</button>
+        </td>
+    </tr>
+
+    <tr *ngFor="let product of products" class="list-item">
+      <td>{{product.label}}</td>
+      <td>
+        <button (click)="deleteProduct(product)">remover</button>
+      </td>
+    </tr>
+
+  </table>
+</div>

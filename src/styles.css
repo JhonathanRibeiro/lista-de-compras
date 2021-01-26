@@ -1,0 +1,71 @@
+* {padding: 0;}
+
+:root {
+    --standard-color: #ebe9e9;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: var(--standard-color);
+}
+
+h1 {
+    font-weight: 600;
+    margin: 10px 7px;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 6px;
+}
+
+input[type=text]{
+    width: 98%;
+    outline: none;
+    padding: 8px 2px;
+    border-radius: 3px;
+    border: 1px solid var(--standard-color);
+}
+
+button {
+    cursor: pointer;
+    padding: 4px 26px;
+    background: transparent;
+    color: red;
+    border: none;
+}
+button:hover {
+    cursor: pointer;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.container  {
+    width: 700px;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 1px 2px 9px rgba(0,0,0,0.2);
+    background: #ffff;
+}
+
+.btn-add-product{
+    width: 120px;
+    border: none;
+    border-radius: 4px;
+    padding: 9px;
+    cursor: pointer;
+    background:#0024c5e8;
+    color: #fff;
+}
+.btn-add-product:hover {
+    background: #0020aff8;
+}
+.btnOutlineDanger {
+    border: 1px solid red!important;
+}
