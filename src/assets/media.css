@@ -1,0 +1,9 @@
+@media print {
+    h1 {
+        text-align: center;
+        color: var(--standard-color);
+    }
+    .print {display: none;}
+    .list-item { text-align: center;}
+
+}

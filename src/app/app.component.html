@@ -3,7 +3,7 @@
     <tr>
       <h1>{{title}}</h1>
     </tr>
-    <tr class="header">
+    <tr class="header print">
       <td>
         <input 
           type="text"
@@ -13,7 +13,6 @@
           #newProduct>
           {{newProduct.focus() }}
         </td>
-
         <td>
           <button 
             class="btn-add-product" 
@@ -32,11 +31,19 @@
     </tr>
 
     <tr *ngFor="let product of list" class="list-item">
-      <td>{{product.name | uppercase}}</td>
       <td>
-        <button (click)="delete(product)">remover</button>
+          {{product.name | uppercase}} &nbsp; -
+          <span>{{today | date:'d/MM/yy  |  HH:mm'}}</span>
+          <span>un</span>
+      </td>
+      <td>
+        <button (click)="delete(product)" class="print">remover</button>
       </td>
     </tr>
-
   </table>
+  <div class="print btn-print">
+    <button onclick="window.print()">
+      imprimir
+    </button>
+  </div>
 </div>

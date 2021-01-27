@@ -1,0 +1,99 @@
+:root {
+    --standard-color: #ebe9e9;
+    --standard-font:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    --color-red: red;
+    --cyan: #0020aff8;
+    --cursor: pointer;
+}
+
+body {
+    font-family: var(--standard-font);
+    background: var(--standard-color);
+}
+
+h1 {
+    font-weight: 100;
+    font-size: 25px;
+    color: var(--cyan);
+    margin: 10px 7px;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 6px;
+}
+
+input[type=text]{
+    width: 98%;
+    outline: none;
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid var(--standard-color);
+}
+
+button {
+    cursor: var(--cursor);
+    padding: 4px 26px;
+    background: transparent;
+    color: var(--color-red);
+    border: none;
+}
+button:hover {
+    cursor: var(--cursor);
+    background: var(--color-red);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.container  {
+    width: 700px;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 1px 2px 9px rgba(0,0,0,0.2);
+    background: #ffff;
+}
+
+.btn-add-product{
+    width: 120px;
+    border: none;
+    border-radius: 4px;
+    padding: 9px;
+    cursor: var(--cursor);
+    background: var(--cyan);
+    color: #fff;
+}
+.btn-add-product:hover {
+    background: var(--cyan);
+}
+.outlineDanger {
+    border: 1px solid var(--color-red)!important;
+}
+.text-danger {
+    color: var(--color-red);
+}
+.display-block {
+    display: block!important;
+}
+.display-none {
+    display: none;
+}
+.btn-print {
+    text-align: center;
+}
+.btn-print button {
+    color: #4d4d4d;
+    text-transform: uppercase;
+    margin-top: 30px;
+    border: 1px solid;
+    border-radius: 3px;
+    padding: 8px 35px;
+}
+.btn-print button:hover {
+    background: #dddd;
+    color: black;
+}

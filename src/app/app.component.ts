@@ -6,27 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Lista de compras';
-
-  list = [
-    {
-      name: 'Chocolate'
-    },
-    {
-      name: 'Coca Cola'
-    },
-    {
-      name: 'Doritos'
-    },
-    {
-      name: 'Coxinha'
-    }
+  title: string = 'Lista de compras';
+  today: number = Date.now();              
+  
+  public list: any[] = [
+    {name: 'Chocolate'},
+    {name: 'Coca Cola'},
+    {name: 'Doritos'}
   ];
 
   public addProduct(productname){
     const el = document.querySelector('#productName');
     const msg = document.querySelector('#msg');
-
+    console.log('produto: ', productname);
+    
     if(productname === ''){
       msg.classList.add('display-block');
       el.classList.add('outlineDanger');
@@ -38,7 +31,6 @@ export class AppComponent {
     const newProduct = {
       name: productname
     };
-    
     this.list.push(newProduct);
   }
 
