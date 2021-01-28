@@ -97,3 +97,13 @@ button:hover {
     background: #dddd;
     color: black;
 }
+.sp-left {
+    width: 51%;
+    display: inline-flex;
+}
+.sp-right {
+    display: inline;
+}
+.w100 {
+    width: 100%;
+}
