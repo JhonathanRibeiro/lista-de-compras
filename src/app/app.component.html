@@ -26,7 +26,11 @@
         <tr *ngFor="let product of list" class="list-item">
             
             <div class="w100">
-                <div class="sp-left">{{product.name | uppercase}} &nbsp;</div>
+                <div class="sp-left">
+                    &nbsp;
+                     {{product.name | uppercase}} 
+                    &nbsp;
+                </div>
                 <div class="sp-right">{{today | date:'d/MM/yy  |  HH:mm'}}</div>
             </div>
 
