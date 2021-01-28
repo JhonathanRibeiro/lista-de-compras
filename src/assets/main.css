@@ -5,27 +5,22 @@
     --cyan: #0020aff8;
     --cursor: pointer;
 }
-
 body {
     font-family: var(--standard-font);
     background: var(--standard-color);
 }
-
 h1 {
     font-weight: 100;
     font-size: 25px;
     color: var(--cyan);
     margin: 10px 7px;
 }
-
 table {
     width: 100%;
 }
-
 td {
     padding: 6px;
 }
-
 input[type=text]{
     width: 98%;
     outline: none;
@@ -33,7 +28,6 @@ input[type=text]{
     border-radius: 3px;
     border: 1px solid var(--standard-color);
 }
-
 button {
     cursor: var(--cursor);
     padding: 4px 26px;
@@ -48,7 +42,6 @@ button:hover {
     border: none;
     border-radius: 5px;
 }
-
 .container  {
     width: 700px;
     padding: 10px;
@@ -57,7 +50,6 @@ button:hover {
     box-shadow: 1px 2px 9px rgba(0,0,0,0.2);
     background: #ffff;
 }
-
 .btn-add-product{
     width: 120px;
     border: none;
@@ -98,7 +90,7 @@ button:hover {
     color: black;
 }
 .sp-left {
-    width: 51%;
+    width: 70%;
     display: inline-flex;
 }
 .sp-right {

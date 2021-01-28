@@ -6,25 +6,33 @@
         </tr>
         <tr class="header print">
             <td>
-                <input type="text" id="productName" placeholder="Nome do produto" maxlength="40" #newProduct> {{newProduct.focus() }}
+                <input 
+                    type="text" 
+                    id="productName" 
+                    placeholder="Nome do produto" 
+                    maxlength="40" 
+                    #newProduct> {{newProduct.focus()}}
             </td>
             <td>
-                <button class="btn-add-product" (click)="addProduct(newProduct.value); newProduct.value=''">
-            Adicionar
-          </button>
+                <button 
+                    class="btn-add-product" 
+                    (click)="addProduct(newProduct.value); newProduct.value=''">
+                    Adicionar
+                </button>
             </td>
         </tr>
 
-        <tr class="display-none text-danger" id="msg">
+        <tr 
+            class="display-none text-danger" 
+            id="msg">
             <td>
                 <small>
-          Não é possível adicionar um produto sem nome, por favor, preencha o campo e tente novamente.
-        </small>
+                    Não é possível adicionar um produto sem nome, por favor, preencha o campo e tente novamente.
+                </small>
             </td>
         </tr>
 
         <tr *ngFor="let product of list" class="list-item">
-            
             <div class="w100">
                 <div class="sp-left">
                     &nbsp;
@@ -40,9 +48,10 @@
         </tr>
     </table>
    </div>
+    
     <div class="print btn-print">
         <button onclick="window.print()">
-      imprimir
-    </button>
+            imprimir
+        </button>
     </div>
 </div>
